@@ -6,9 +6,15 @@ development:
   database: rides_api
 
 test:
-  adapter: sqlite
-  database: 'db/test.sqlite3'
-
+  host: localhost
+  port: 5433
+  user: postgres
+  password: postgres
+  database: rides_api
+  
 production:
-  adapter: sqlite
-  database: 'db/test.sqlite3'
+  host: localhost
+  port: 5433
+  user: postgres
+  password: postgres
+  database: rides_api
