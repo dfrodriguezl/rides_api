@@ -1,0 +1,14 @@
+development:
+  host: localhost
+  port: 5433
+  user: postgres
+  password: postgres
+  database: rides_api
+
+test:
+  adapter: sqlite
+  database: 'db/test.sqlite3'
+
+production:
+  adapter: sqlite
+  database: 'db/test.sqlite3'
