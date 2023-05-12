@@ -7,7 +7,7 @@ def finish_ride(id_ride, latitude_finish, longitude_finish, email)
   total_amount = calculate_amount_ride(interval_min, distance)
   update_ride_cost_distance(id_ride, total_amount, distance)
   rider = get_rider_attributes(ride[:id_rider])
-  create_transaction(total_amount*100, email, rider[:payment_source], id_ride)
+  return create_transaction(total_amount*100, email, rider[:payment_source], id_ride)
 end
 
 # Calculate total amount to be paid

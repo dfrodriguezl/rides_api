@@ -1,7 +1,12 @@
 class RidesApi <  Sinatra::Application
 
-  # Dry::Validation.load_extensions(:predicates_as_macros)
-
+  # Create payment method
+  #
+  # @param [tokenized_card] token from card
+  # @param [email] email from user
+  # @return [status] transaction status
+  # @return [payment_source_id] id new payment source created
+  # @return [message] message from status
   post '/createPaymentMethod' do
     content_type :json
     params do
@@ -16,6 +21,14 @@ class RidesApi <  Sinatra::Application
     response.to_json
   end
 
+  # Request a new ride
+  #
+  # @param [latitude] latitude of user's current location
+  # @param [longitude] longitude of user's current location
+  # @param [email] email of user
+  # @return [id_ride] id of new ride
+  # @return [driver] driver name 
+  # @return [message] message from status
   post '/requestRide' do
     content_type :json
     params do

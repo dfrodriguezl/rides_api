@@ -1,5 +1,15 @@
 class RidesApi <  Sinatra::Application
 
+  # Finish ride
+  #
+  # @param [id_ride] id of finished ride
+  # @param [latitude_finish] latitude of final location
+  # @param [longitude_finish] longitude of final location
+  # @param [email] email of user
+  # @return [status] transaction status
+  # @return [transaction_id] transaction id
+  # @return [cost] total cost of ride
+  # @return [message] message from status
   post '/finishRide' do
     content_type :json
     params do
